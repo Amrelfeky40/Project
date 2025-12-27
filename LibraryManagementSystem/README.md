@@ -35,3 +35,31 @@ A clean, object-oriented Java application demonstrating **SOLID principles** and
 5. **Repository Pattern** - `LibraryRepository` interface
 
 ## 📦 Project Structure
+LibraryManagementSystem/
+├── src/main/java/com/library/
+│ ├── Main.java # Entry point
+│ ├── models/ # Domain models
+│ │ ├── Book.java, Magazine.java, DVD.java
+│ │ ├── Member.java, Author.java, Loan.java
+│ ├── interfaces/ # SOLID interfaces
+│ │ ├── Borrowable.java, Searchable.java
+│ │ └── Notifiable.java
+│ ├── services/ # Business logic
+│ │ ├── LibraryService.java (Singleton)
+│ │ ├── NotificationService.java (Observer)
+│ │ └── SearchService.java, ReportService.java
+│ ├── repositories/ # Data access
+│ │ ├── LibraryRepository.java
+│ │ └── InMemoryLibraryRepository.java
+│ ├── factories/ # Creation patterns
+│ │ └── ItemFactory.java
+│ ├── strategies/ # Behavioral patterns
+│ │ ├── SearchStrategy.java
+│ │ ├── TitleSearchStrategy.java
+│ │ └── AuthorSearchStrategy.java
+│ └── observers/ # Observer pattern
+│ ├── LibraryObserver.java
+│ ├── EmailNotification.java
+│ └── SMSNotification.java
+├── pom.xml # Maven configuration
+└── README.md # This file
